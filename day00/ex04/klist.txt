@@ -1,0 +1,2 @@
+Jan  7 00:53:35 2020  Jan  7 10:53:35 2020  krbtgt/42.US.ORG@42.US.ORG
+Jan  7 00:53:36 2020  Jan  7 10:53:35 2020  ldap/ldap-master.42.us.org@42.US.ORG
