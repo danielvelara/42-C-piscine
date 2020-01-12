@@ -1,27 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_iterative_power.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaleman <jaleman@student.42.us.org>        +#+  +:+       +#+        */
+/*   By: davelazq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/13 11:53:24 by jaleman           #+#    #+#             */
-/*   Updated: 2020/01/11 20:35:46 by davelazq         ###   ########.fr       */
+/*   Created: 2020/01/11 21:52:06 by davelazq          #+#    #+#             */
+/*   Updated: 2020/01/11 23:30:58 by davelazq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_iterative_factorial(int nb)
+int		ft_iterative_power(int nb, int power)
 {
-	int		factorial;
-	int		i;
+	int result;
+	int counter;
 
-	if (nb == 0)
-		return (1);
-	else if (nb < 0)
+	if (power < 0)
+	{
 		return (0);
-	factorial = 1;
-	i = 0;
-	while (i++ < nb)
-		factorial *= i;
-	return (factorial);
+	}
+	else if (power == 0)
+	{
+		return (1);
+	}
+	result = 1;
+	counter = 0;
+	while (counter < power)
+	{
+		result *= nb;
+		counter++;
+	}
+	return (result);
 }

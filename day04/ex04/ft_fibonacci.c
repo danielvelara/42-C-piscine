@@ -1,27 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*   ft_fibonacci.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jaleman <jaleman@student.42.us.org>        +#+  +:+       +#+        */
+/*   By: davelazq <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/08/13 11:53:24 by jaleman           #+#    #+#             */
-/*   Updated: 2020/01/11 20:35:46 by davelazq         ###   ########.fr       */
+/*   Created: 2020/01/11 23:18:04 by davelazq          #+#    #+#             */
+/*   Updated: 2020/01/11 23:30:39 by davelazq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_iterative_factorial(int nb)
+int		ft_fibonacci(int index)
 {
-	int		factorial;
-	int		i;
-
-	if (nb == 0)
-		return (1);
-	else if (nb < 0)
+	if (index < 0)
+	{
+		return (-1);
+	}
+	if (index == 0)
+	{
 		return (0);
-	factorial = 1;
-	i = 0;
-	while (i++ < nb)
-		factorial *= i;
-	return (factorial);
+	}
+	if (index <= 2)
+	{
+		return (1);
+	}
+	return (ft_fibonacci(index - 1) + (ft_fibonacci(index - 2)));
 }
